@@ -1,0 +1,7 @@
+Placement - Rate Limiter should be placed inside the API gateway
+
+Functional Requirements -
+Rate limiter should limit the number of request from a certain user within a certain period of time to avoid spam. This is done to reduce the load on the load balancer. This user can be banned from submitting requests for a certain period of time or forever based on data.
+Rate limiter should limit the number of requests [overall] sent to the load balancer as per load balancer's maximum capacity or 90% of maximum capacity.
+Rate limiter should be logging every request for tracking purposes so analysis can be drawn and actions can be taken based on the data. This can include requests per customer/per api end point/per region/requests at different times of the day.
+Rate limiter should be asynchronously saving the logs in a designated area in case the rate limiter goes down, we have the data upto that point.
